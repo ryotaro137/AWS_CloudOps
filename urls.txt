@@ -1,3 +1,12 @@
-https://pages.awscloud.com/rs/112-TZM-766/images/20190618_AWS-Blackbelt_Config.pdf
-https://pages.awscloud.com/rs/112-TZM-766/images/20201208_AWSBlackBelt_ConfigUpdate_A.pdf
-https://pages.awscloud.com/rs/112-TZM-766/images/202109_AWS_Black_Belt-Container245_config.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2025_SavingsPlans_0430_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2024_Amazon_ECS_Introduction_0831_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2024_AWS-Fargate-Introduction_1031_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2024_AWS-DataSync_0930_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2023_AWS-CDK-Basic-1-Overview_0731_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2023_AWS_ADS.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2025_AWS-Backup-DR-Strategy-Basic_0430_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/20180718_AWS_BlackBelt_AWSServiceCatalog_public.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2023_AWS-ControlTower-Procedures_0831_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2023_AWS-ControlTower-Basics_0831_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2023_AWS-ControlTower-Features_0930_v1.pdf
+https://pages.awscloud.com/rs/112-TZM-766/images/AWS-Black-Belt_2023_AWS-Certificate-Manager_v1.pdf

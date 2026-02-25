@@ -9,7 +9,7 @@ from pypdf import PdfReader, PdfWriter
 # ==========================
 URL_FILE = "urls.txt"
 DOWNLOAD_DIR = "downloads"
-MERGED_OUTPUT = "BlackBelt_Config.pdf"
+MERGED_OUTPUT = "BlackBelt_fromQuita.pdf"
 MAX_WORKERS = 5
 TIMEOUT = 60
 
