@@ -1,0 +1,110 @@
+{
+  "/MyFirtstEc2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-kernel-5.10-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amikernel510hvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+    }
+  ],
+  "/MyFirtstEc2/InstanceId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "InstanceId"
+    }
+  ],
+  "/MyFirtstEc2/PublicIp": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PublicIp"
+    }
+  ],
+  "/MyFirtstEc2/PublicDnsName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PublicDnsName"
+    }
+  ],
+  "/MyFirtstEc2/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    }
+  ],
+  "/MyFirtstEc2/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    }
+  ],
+  "/MyFirtstEc2/MyVpc/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyVpcF9F0CA6F"
+    }
+  ],
+  "/MyFirtstEc2/MyVpc/IGW": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyVpcIGW5C4A4F63"
+    }
+  ],
+  "/MyFirtstEc2/MyVpc/VPCGW": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyVpcVPCGW488ACE0D"
+    }
+  ],
+  "/MyFirtstEc2/MySecurityGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MySecurityGroupAC8D442C"
+    }
+  ],
+  "/MyFirtstEc2/MyInstance/InstanceProfile": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyInstanceInstanceProfile2784C631"
+    }
+  ],
+  "/MyFirtstEc2/MyInstance/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyInstanceA12EC128"
+    }
+  ],
+  "/MyFirtstEc2/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    }
+  ],
+  "/MyFirtstEc2/MyVpc/PublicSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyVpcPublicSubnet1SubnetF6608456"
+    }
+  ],
+  "/MyFirtstEc2/MyVpc/PublicSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyVpcPublicSubnet1RouteTableC46AB2F4"
+    }
+  ],
+  "/MyFirtstEc2/MyVpc/PublicSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyVpcPublicSubnet1RouteTableAssociation2ECEE1CB"
+    }
+  ],
+  "/MyFirtstEc2/MyVpc/PublicSubnet1/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyVpcPublicSubnet1DefaultRoute95FDF9EB"
+    }
+  ],
+  "/MyFirtstEc2/MyInstance/InstanceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyInstanceInstanceRole1C4D4747"
+    }
+  ]
+}

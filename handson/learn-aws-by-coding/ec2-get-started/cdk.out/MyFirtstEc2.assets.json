@@ -1,0 +1,21 @@
+{
+  "version": "52.0.0",
+  "files": {
+    "3a90e5ad93a44d37c88fb8470dc78399599ad5ad6c5d186b36e8e8408db7c558": {
+      "displayName": "MyFirtstEc2 Template",
+      "source": {
+        "path": "MyFirtstEc2.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "257394482019-ap-northeast-1-e7e2220f": {
+          "bucketName": "cdk-hnb659fds-assets-257394482019-ap-northeast-1",
+          "objectKey": "3a90e5ad93a44d37c88fb8470dc78399599ad5ad6c5d186b36e8e8408db7c558.json",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::257394482019:role/cdk-hnb659fds-file-publishing-role-257394482019-ap-northeast-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
