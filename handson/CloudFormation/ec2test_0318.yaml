@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: 'Writing'
+
+Parameters:
+  MySubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: インスタンスを配置するサブネットIDを選択してください。
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-04f776d155f250fff
+      InstanceType: t3.micro
+      SubnetId: !Ref MySubnetId
+
+Outputs:
+  CreateInstanceId:
+    Description: 作成したEC2のインスタンスID
+    Value: !Ref MyEC2Instance

@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: 'Deploy EC2 instance with conditions'
+
+Parameters:
+  EnvType:
+    Description: デプロイ環境を選択してください。
+    Type: String
+    Default: dev
+    AllowedValues: [prod, dev]
+
+  MySubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: インスタンスを配置するサブネットIDを選択してください。
+
+Mappings:
+  RegionMap:
+    ap-northeast-1:
+      AMI: "ami-04f776d155f250fff"
+    ap-northeast-3:
+      AMI: "ami-04c66f3ed7efec19c"
+
+Conditions:
+  IsProduction: !Equals [!Ref EnvType, "prod"]
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
+      InstanceType: !If [IsProduction, "t3.medium","t3.micro"]
+      SubnetId: !Ref MySubnetId
+      Tags:
+        - Key: Name
+          Value: !Sub "MyEC2-${EnvType}"
+
+Outputs:
+  InstanceId:
+    Value: !Ref MyEC2Instance
+  InstanceTypeUsed:
+    Description: 実際に適用されたインスタンスタイプです.
+    Value: !If [IsProduction, "t3.medium", "t3.micro"]
