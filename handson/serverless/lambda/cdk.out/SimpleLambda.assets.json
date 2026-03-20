@@ -1,0 +1,21 @@
+{
+  "version": "52.0.0",
+  "files": {
+    "9d64cd55a5690831100b0435462ce522f913b0025ff9634d0c0abd6bb28a5e8c": {
+      "displayName": "SimpleLambda Template",
+      "source": {
+        "path": "SimpleLambda.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "257394482019-ap-northeast-1-506398ed": {
+          "bucketName": "cdk-hnb659fds-assets-257394482019-ap-northeast-1",
+          "objectKey": "9d64cd55a5690831100b0435462ce522f913b0025ff9634d0c0abd6bb28a5e8c.json",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::257394482019:role/cdk-hnb659fds-file-publishing-role-257394482019-ap-northeast-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

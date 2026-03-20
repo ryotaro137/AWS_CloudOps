@@ -1,0 +1,50 @@
+{
+  "/SimpleLambda/FunctionName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "FunctionName"
+    }
+  ],
+  "/SimpleLambda/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    }
+  ],
+  "/SimpleLambda/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    }
+  ],
+  "/SimpleLambda/LambdaHandler/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaHandler212865DC"
+    }
+  ],
+  "/SimpleLambda/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    }
+  ],
+  "/SimpleLambda/LambdaHandler/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaHandlerServiceRole8F7B4955"
+    }
+  ],
+  "/SimpleLambda/LambdaHandler/DeadLetterQueue/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaHandlerDeadLetterQueue8478E16F"
+    }
+  ],
+  "/SimpleLambda/LambdaHandler/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaHandlerServiceRoleDefaultPolicy52DB1F25"
+    }
+  ]
+}

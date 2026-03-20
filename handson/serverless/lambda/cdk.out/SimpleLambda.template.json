@@ -1,0 +1,161 @@
+{
+ "Resources": {
+  "LambdaHandlerServiceRole8F7B4955": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "SimpleLambda/LambdaHandler/ServiceRole/Resource"
+   }
+  },
+  "LambdaHandlerServiceRoleDefaultPolicy52DB1F25": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sqs:SendMessage",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "LambdaHandlerDeadLetterQueue8478E16F",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "LambdaHandlerServiceRoleDefaultPolicy52DB1F25",
+    "Roles": [
+     {
+      "Ref": "LambdaHandlerServiceRole8F7B4955"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "SimpleLambda/LambdaHandler/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "LambdaHandlerDeadLetterQueue8478E16F": {
+   "Type": "AWS::SQS::Queue",
+   "Properties": {
+    "MessageRetentionPeriod": 1209600
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "SimpleLambda/LambdaHandler/DeadLetterQueue/Resource"
+   }
+  },
+  "LambdaHandler212865DC": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "ZipFile": "\nimport time\nfrom random import choice, randint\n\ndef handler(event, context):\n    time.sleep(randint(2,5))\n    sushi = [\"salmon\", \"tuna\", \"mackerel\"]\n    message = \"Welcome to Cloud Sushi. Your order is \" + choice(sushi)\n    print(message)\n    return message\n"
+    },
+    "DeadLetterConfig": {
+     "TargetArn": {
+      "Fn::GetAtt": [
+       "LambdaHandlerDeadLetterQueue8478E16F",
+       "Arn"
+      ]
+     }
+    },
+    "Handler": "index.handler",
+    "MemorySize": 128,
+    "Role": {
+     "Fn::GetAtt": [
+      "LambdaHandlerServiceRole8F7B4955",
+      "Arn"
+     ]
+    },
+    "Runtime": "python3.12",
+    "Timeout": 10
+   },
+   "DependsOn": [
+    "LambdaHandlerServiceRoleDefaultPolicy52DB1F25",
+    "LambdaHandlerServiceRole8F7B4955"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "SimpleLambda/LambdaHandler/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zXKUQ7CIBAE0LP0H1bb6glM/LXWA5gtxbiWgsqSpiHc3UDj17yZTAPNoYV9hYuXapykoQHijVFNAhd/jwbnYUSI52AVk7Pi9LB/J0E4Q+yd0Xku2TlDas11UxL+4yFegw7lVJBS5iXwO3AS3cpPZ3ct1DUcq5cnkt9gmWYN/ZY/whF3f6UAAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "SimpleLambda/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "FunctionName": {
+   "Value": {
+    "Ref": "LambdaHandler212865DC"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}
